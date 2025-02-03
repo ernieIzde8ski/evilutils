@@ -1,9 +1,11 @@
 """All the types I don't want to write twice."""
 
+__all__ = ["Getter", "HasName", "name", "StrPath", "Callable", "Newable", "strong_cast"]
+
 from os import PathLike
 from typing import TYPE_CHECKING, Any, Protocol, TypeVar
 
-__all__ = ["StrPath"]
+from .dunder import Getter, HasName, name
 
 type StrPath = str | PathLike[str]
 """Like StrPath from typeshed."""
