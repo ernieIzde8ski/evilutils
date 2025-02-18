@@ -14,3 +14,13 @@ def test_classes_have_names():
 def test_instances_dont():
     with pytest.raises(AttributeError):
         assert isinstance(name(object()), str)  # pyright: ignore[reportArgumentType]
+
+
+def test_can_get_type_name():
+    """
+    Issue: https://github.com/ernieIzde8ski/evilutils/issues/1
+    """
+
+    class FooBar: ...
+
+    assert name(FooBar) == "FooBar"
