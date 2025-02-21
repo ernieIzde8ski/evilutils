@@ -31,7 +31,7 @@ repos:
         fail_fast: true
       - id: pytest
         name: pytest-doctest
-        entry: pytest --doctest-modules
+        entry: pytest -v --doctest-modules
         description: "Doctesting with pytest"
         language: python
         types_or: [python]
@@ -40,7 +40,7 @@ repos:
           - "pytest>=8.3.4"
       - id: pytest
         name: pytest
-        entry: pytest
+        entry: pytest -v
         description: "Run Python tests with Pytest"
         language: python
         types_or: [python]
