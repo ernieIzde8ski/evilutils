@@ -15,7 +15,7 @@ line_length = 90
 
 [tool.black]
 line-length = 90
-target-version = ["py312", "py313"]
+target-version = ["py312", "py313", "py314"]
 skip-magic-trailing-comma = true
 
 [tool.basedpyright]
