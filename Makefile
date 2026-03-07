@@ -1,4 +1,4 @@
-.PHONY: default clean dist
+.PHONY: default clean dist test
 
 default:
 	@echo "please select a target"; exit 1
@@ -9,3 +9,6 @@ clean:
 dist:
 	python -m build
 	source .env 2>/dev/null || :; twine upload 'dist/*'
+
+test:
+	pytest --doctest-modules

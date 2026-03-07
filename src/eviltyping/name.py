@@ -20,5 +20,9 @@ type HasName = _HasNameStr | _HasNameGetter
 def name(obj: HasName, /) -> str:
     """Returns the name of an object.
 
-    For the name of an object's *type*, consider `type(name(obj))`."""
+    For the name of an object's *type*, consider `name(type(obj))`.
+
+    >>> name(type(1))
+    'int'
+    """
     return obj.__name__
