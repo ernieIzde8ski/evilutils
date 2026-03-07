@@ -57,6 +57,7 @@ where = ["src"]
 
 [dependency-groups]
 dev = [
+    "pip>=26.0.1",
     "pre-commit>=4.5.1",
     "pytest>=9.0.2",
     "sphinx>=9.1.0",
