@@ -40,7 +40,8 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dynamic = ["dependencies", "version"]
+dependencies = ["typing_extensions>=4.12.2"]
+dynamic = ["version"]
 license = { file = "LICENSE" }
 
 [project.urls]
@@ -53,3 +54,10 @@ version = { attr = "evilutils.__version__" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "sphinx>=9.1.0",
+]
