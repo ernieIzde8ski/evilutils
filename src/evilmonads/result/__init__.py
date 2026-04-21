@@ -3,9 +3,9 @@
 __all__ = ["UnwrapError", "Err", "Null", "Ok", "Result", "Option", "catch_unwind"]
 
 
+from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
-from typing import Callable
 
 from .error import UnwrapError
 from .variants import Err, Null, Ok, Some

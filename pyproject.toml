@@ -59,6 +59,7 @@ where = ["src"]
 dev = [
     "pip>=26.0.1",
     "pre-commit>=4.5.1",
-    "pytest>=9.0.2",
+    "pytest>=8.3.3,<9.0.0",
+    "pytest-case>=1.0.0",
     "sphinx>=9.1.0",
 ]

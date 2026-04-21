@@ -1,18 +1,28 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v5.0.0"
+    rev: "v6.0.0"
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
+        exclude: "\\.basedpyright/baseline\\.json$"
       - id: trailing-whitespace
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.9.0"
+    rev: "v0.15.11"
     hooks:
+      - id: ruff-check
+        args: [ --fix ]
       - id: ruff-format
   - repo: https://github.com/PyCQA/isort
-    rev: "5.13.2"
+    rev: "8.0.1"
     hooks:
       - id: isort
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.21.2
+    hooks:
+      - id: pyupgrade
+        args: [--py312-plus]
+        types: [file]
+        types_or: [python, pyi]
   - repo: local
     hooks:
       # shoutout to https://github.com/RobertCraigie/pyright-python
@@ -25,8 +35,8 @@ repos:
         require_serial: true
         additional_dependencies:
           - basedpyright>=1.23.2
-          - pytest>=8.3.4
-        minimum_pre_commit_version: "2.9.2"
+          - pytest>=8.3.4,<9.0.0
+          - pytest-case>=1.0.0
         pass_filenames: false
         fail_fast: true
       - id: pytest
@@ -37,7 +47,8 @@ repos:
         types_or: [python]
         pass_filenames: false
         additional_dependencies:
-          - "pytest>=8.3.4"
+          - pytest>=8.3.4,<9.0.0
+          - pytest-case>=1.0.0
       - id: pytest
         name: pytest
         entry: pytest -v
@@ -46,4 +57,5 @@ repos:
         types_or: [python]
         pass_filenames: false
         additional_dependencies:
-          - "pytest>=8.3.4"
+          - pytest>=8.3.4,<9.0.0
+          - pytest-case>=1.0.0
