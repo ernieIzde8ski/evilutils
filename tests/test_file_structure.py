@@ -20,5 +20,5 @@ def is_typed(py_mod: Path):
 @case((module,) for module in MODULES)
 def test_modules_are_typed(path: Path) -> None:
     assert not is_python_module(path) or is_typed(path), (
-        f"Module {path} should contain `py.typed` file"
+        f"Module {path.name!r} should contain `py.typed` file"
     )
