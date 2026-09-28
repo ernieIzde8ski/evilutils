@@ -14,4 +14,4 @@ Major changes:
 - Added CHANGELOG.md file.
 - Added `evilstructs` module & `evilstructs.frozendict` class.
 - Added `evildatetime` module.
-- Added `evilrng` module
+- Added `evilrng` module.
