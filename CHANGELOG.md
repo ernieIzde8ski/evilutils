@@ -22,6 +22,10 @@ Breaking changes:
 - Renamed `evildatetime.TimeDelta` to `evildatetime.Duration`. The `TimeDelta`
   alias is deprecated & scheduled for future removal.
 
+## v0.3.1-alpha1, 2026-09-28
+
+Internal changes only. See `v0.3.0` for changes from `v0.2.0`.
+
 ## master
 
 No noteworthy changes.
