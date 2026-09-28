@@ -28,4 +28,5 @@ Internal changes only. See `v0.3.0` for changes from `v0.2.0`.
 
 ## master
 
-No noteworthy changes.
+- `evildatetime`:
+  - Add `Seconds` class.
