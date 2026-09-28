@@ -9,9 +9,13 @@ docstring-code-format = true
 line-ending = "lf"
 skip-magic-trailing-comma = true
 
+[tool.ruff.lint.isort]
+force-single-line = true
+
 [tool.isort]
 profile = "black"
 line_length = 90
+force_single_line = true
 
 [tool.black]
 line-length = 90
