@@ -29,4 +29,5 @@ Internal changes only. See `v0.3.0` for changes from `v0.2.0`.
 ## master
 
 - `evildatetime`:
+  - Add methods to class `Duration`: `from_seconds`, `from_milliseconds`
   - Add `Seconds` class.

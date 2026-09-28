@@ -3,7 +3,7 @@ __all__ = ["Date", "DateTime", "Duration", "Seconds", "Time", "TimeZone", "TzInf
 from datetime import date as Date
 from datetime import datetime as DateTime
 from datetime import time as Time
-from datetime import timedelta as Duration
+from datetime import timedelta
 from datetime import timezone as TimeZone
 from datetime import tzinfo as TzInfo
 from typing import Self
@@ -13,12 +13,22 @@ from typing import override
 from typing_extensions import deprecated
 
 
+class Duration(timedelta):
+    @classmethod
+    def from_seconds(cls, seconds: float) -> Self:
+        return cls(seconds=seconds)
+
+    @classmethod
+    def from_milliseconds(cls, milliseconds: float) -> Self:
+        return cls(milliseconds=milliseconds)
+
+
 class Seconds(Duration):
     @overload
     def __new__(cls, inst: Duration, /) -> Self: ...
 
     @overload
-    def __new__(cls, seconds: float = 0, /) -> Self: ...
+    def __new__(cls, seconds: float = 0) -> Self: ...
 
     @override
     def __new__(cls, seconds: Duration | float = 0) -> Self:
@@ -32,5 +42,5 @@ class Seconds(Duration):
 
 
 @deprecated("Deprecated in favor of `Duration`.")
-class TimeDelta(Duration):
+class TimeDelta(timedelta):
     pass
