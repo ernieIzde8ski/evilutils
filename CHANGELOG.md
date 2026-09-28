@@ -15,9 +15,13 @@ Major changes:
 - Added `evildatetime` module.
 - Added `evilrng` module.
 
-## master
+## v0.3.0, 2026-09-28
 
 Breaking changes:
 
 - Renamed `evildatetime.TimeDelta` to `evildatetime.Duration`. The `TimeDelta`
   alias is deprecated & scheduled for future removal.
+
+## master
+
+No noteworthy changes.
