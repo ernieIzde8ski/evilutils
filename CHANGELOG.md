@@ -6,7 +6,6 @@ Breaking changes:
 
 - Shuffled & remodularized `eviltyping`. Imports directly from `eviltyping`
   should still be preserved.
-- Renamed `evildatetime.TimeDelta` to `evildatetime.Duration`. The alias is still available, albeit deprecated.
 
 Major changes:
 
@@ -15,3 +14,10 @@ Major changes:
 - Added `evilstructs` module & `evilstructs.frozendict` class.
 - Added `evildatetime` module.
 - Added `evilrng` module.
+
+## master
+
+Breaking changes:
+
+- Renamed `evildatetime.TimeDelta` to `evildatetime.Duration`. The `TimeDelta`
+  alias is deprecated & scheduled for future removal.
